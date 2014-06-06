@@ -3,8 +3,8 @@ Created-By: JDeveloper 11.1.1.8
 Extension-Name: custom.analytics.extension
 Implementation-Label: 11.1.1.8.0
 Implementation-Title: custom.analytics.extension
-Implementation-Vendor: VASSIT Services LTD
-Implementation-Version: 11.1.8
+Implementation-Vendor: Daniel Merchan Garcia
+Implementation-Version: 11.1.1
 Specification-Title: custom.analytics.extension
-Specification-Vendor: VASSIT Services LTD
+Specification-Vendor: Daniel Merchan Garcia
 Specification-Version: 11.1.1
