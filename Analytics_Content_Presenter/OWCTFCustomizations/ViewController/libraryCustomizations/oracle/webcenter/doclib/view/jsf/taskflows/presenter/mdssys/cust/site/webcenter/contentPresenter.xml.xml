@@ -1,0 +1,234 @@
+<mds:customization version="11.1.1.64.93"
+                   xmlns:mds="http://xmlns.oracle.com/mds">
+  <mds:insert after="presenterWizard" parent="doclib-content-presenter">
+    <method-call id="analytics-single"
+                 xmlns="http://xmlns.oracle.com/adf/controller">
+      <method>#{backingBeanScope.analyticsPresenter.contentPresenterDetailView}</method>
+      <outcome id="swc_5">
+        <fixed-outcome>presenter-single-node-view</fixed-outcome>
+      </outcome>
+    </method-call>
+  </mds:insert>
+  <mds:replace node="dlcp85/text()">
+    swc-router-single
+  </mds:replace>
+  <mds:insert after="dlcp78" parent="doclib-content-presenter">
+    <control-flow-rule id="swc_6"
+                       xmlns="http://xmlns.oracle.com/adf/controller">
+      <from-activity-id id="swc_7">analytics-single</from-activity-id>
+      <control-flow-case id="swc_10">
+        <from-outcome id="swc_8">presenter-single-node-view</from-outcome>
+        <to-activity-id id="swc_9">presenter-single-node-view</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </mds:insert>
+  <mds:insert after="dlcp33" parent="doclib-content-presenter">
+    <input-parameter-definition id="swc_11"
+                                xmlns="http://xmlns.oracle.com/adf/controller">
+      <display-name id="swc_35">Enable Analytics</display-name>
+      <name id="swc_12">analytics</name>
+      <value>#{pageFlowScope.analyticsPresenterConfig.analyticsEnabled}</value>
+      <class>java.lang.Boolean</class>
+    </input-parameter-definition>
+  </mds:insert>
+  <mds:insert before="dlcp63" parent="doclib-content-presenter">
+    <method-call id="analytics-multi"
+                 xmlns="http://xmlns.oracle.com/adf/controller">
+      <method>#{backingBeanScope.analyticsPresenter.contentPresenterListView}</method>
+      <outcome id="swc_1">
+        <fixed-outcome>presenter-multi-node-view</fixed-outcome>
+      </outcome>
+    </method-call>
+  </mds:insert>
+  <mds:replace node="dlcp88/text()">
+    swc-router-multi
+  </mds:replace>
+  <mds:insert before="doclib-content-presenter(xmlns(mds_ns1=http://xmlns.oracle.com/adf/controller))/mds_ns1:use-page-fragments"
+              parent="doclib-content-presenter">
+    <control-flow-rule id="swc_2"
+                       xmlns="http://xmlns.oracle.com/adf/controller">
+      <from-activity-id id="swc_3">analytics-multi</from-activity-id>
+      <control-flow-case id="swc_13">
+        <from-outcome id="swc_14">presenter-multi-node-view</from-outcome>
+        <to-activity-id id="swc_4">presenter-multi-node-view</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </mds:insert>
+  <mds:insert before="dlcp63" parent="doclib-content-presenter">
+    <router id="swc-router-single"
+            xmlns="http://xmlns.oracle.com/adf/controller">
+      <case>
+        <expression>#{pageFlowScope.analyticsPresenterConfig.analyticsEnabled}</expression>
+        <outcome id="swc_15">single-analytics</outcome>
+      </case>
+      <case>
+        <expression>#{!pageFlowScope.analyticsPresenterConfig.analyticsEnabled}</expression>
+        <outcome id="swc_16">presenter-single-node-view</outcome>
+      </case>
+      <default-outcome>presenter-single-node-view</default-outcome>
+    </router>
+  </mds:insert>
+  <mds:insert before="doclib-content-presenter(xmlns(mds_ns1=http://xmlns.oracle.com/adf/controller))/mds_ns1:use-page-fragments"
+              parent="doclib-content-presenter">
+    <control-flow-rule id="swc_17"
+                       xmlns="http://xmlns.oracle.com/adf/controller">
+      <from-activity-id id="swc_18">swc-router-single</from-activity-id>
+      <control-flow-case id="swc_20">
+        <from-outcome id="swc_19">single-analytics</from-outcome>
+        <to-activity-id id="swc_21">analytics-single</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="swc_23">
+        <from-outcome id="swc_24">presenter-single-node-view</from-outcome>
+        <to-activity-id id="swc_22">presenter-single-node-view</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </mds:insert>
+  <mds:insert before="dlcp63" parent="doclib-content-presenter">
+    <router id="swc-router-multi"
+            xmlns="http://xmlns.oracle.com/adf/controller">
+      <case>
+        <expression>#{pageFlowScope.analyticsPresenterConfig.analyticsEnabled}</expression>
+        <outcome id="swc_25">multi-analytics</outcome>
+      </case>
+      <case>
+        <expression>#{!pageFlowScope.analyticsPresenterConfig.analyticsEnabled}</expression>
+        <outcome id="swc_26">presenter-multi-node-view</outcome>
+      </case>
+      <default-outcome>presenter-multi-node-view</default-outcome>
+    </router>
+  </mds:insert>
+  <mds:insert before="doclib-content-presenter(xmlns(mds_ns1=http://xmlns.oracle.com/adf/controller))/mds_ns1:use-page-fragments"
+              parent="doclib-content-presenter">
+    <control-flow-rule id="swc_27"
+                       xmlns="http://xmlns.oracle.com/adf/controller">
+      <from-activity-id id="swc_28">swc-router-multi</from-activity-id>
+      <control-flow-case id="swc_30">
+        <from-outcome id="swc_31">multi-analytics</from-outcome>
+        <to-activity-id id="swc_29">analytics-multi</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="swc_32">
+        <from-outcome id="swc_34">presenter-multi-node-view</from-outcome>
+        <to-activity-id id="swc_33">presenter-multi-node-view</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </mds:insert>
+  <mds:insert after="dlcp106" parent="doclib-content-presenter">
+    <managed-bean id="swc_36" xmlns="http://xmlns.oracle.com/adf/controller">
+      <managed-bean-name id="swc_37">analyticsPresenter</managed-bean-name>
+      <managed-bean-class id="swc_39">oracle.webcenter.analytics.presenter.PresenterEventHandler</managed-bean-class>
+      <managed-bean-scope id="swc_38">backingBean</managed-bean-scope>
+    </managed-bean>
+  </mds:insert>
+  <mds:insert before="dlcp001" parent="doclib-content-presenter">
+    <managed-bean id="swc_43" xmlns="http://xmlns.oracle.com/adf/controller">
+      <managed-bean-name id="swc_41">analyticsPresenterConfig</managed-bean-name>
+      <managed-bean-class id="swc_42">oracle.webcenter.analytics.presenter.PresenterAnalyticsConfig</managed-bean-class>
+      <managed-bean-scope id="swc_40">pageFlow</managed-bean-scope>
+    </managed-bean>
+  </mds:insert>
+</mds:customization>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
