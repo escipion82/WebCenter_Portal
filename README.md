@@ -8,6 +8,9 @@ Extension to collect analytics when a Content is viewed in a Detail or List Cont
 - OWCPortalExtensions: WebCenter Portal Server Extension project to reference the AnalyticsExtensions Shared-lib in WebCenter Portal.
 - OWCTFCustomizations: Contains the required customizations to be done in Content Presenter to add the Analytics Extension Code
 
+Documentation:
+- http://www.vassit.co.uk/assets/VASSIT-WebCenter-Analytics-Extension-for-Content-Presenter.pdf
+
 ===========================
 Project: Twitter_Search_Live_Adapter
 ------------- 
