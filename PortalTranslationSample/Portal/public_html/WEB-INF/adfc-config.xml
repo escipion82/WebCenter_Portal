@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__3">
+    <managed-bean-name id="__1">localeHandler</managed-bean-name>
+    <managed-bean-class id="__2">es.merchan.sample.portal.bean.locale.LocaleHandler</managed-bean-class>
+    <managed-bean-scope id="__4">session</managed-bean-scope>
+  </managed-bean>
+</adfc-config>
