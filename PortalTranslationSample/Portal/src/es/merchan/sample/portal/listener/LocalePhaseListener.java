@@ -8,9 +8,6 @@ import oracle.adf.controller.v2.lifecycle.PagePhaseListener;
 
 import oracle.adf.share.ADFContext;
 
-import oracle.webcenter.portalframework.sitestructure.ResourceNotFoundException;
-import oracle.webcenter.portalframework.sitestructure.SiteStructure;
-import oracle.webcenter.portalframework.sitestructure.SiteStructureContext;
 import oracle.webcenter.portalframework.sitestructure.SiteStructureUtils;
 
 public class LocalePhaseListener implements PagePhaseListener {
