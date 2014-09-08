@@ -748,6 +748,13 @@
                   <url path="lib/commons-lang3-3.3.2-src.zip" jar-entry=""/>
                </list>
             </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../../../../../Oracle/Middleware/jdeveloper/webcenter/modules/oracle.portlet.server_11.1.1/composer-decl-comp.jar" jar-entry=""/>
+               </list>
+               <value n="description" v="Library2"/>
+               <value n="id" v="Library2"/>
+            </hash>
          </list>
       </hash>
       <list n="libraryReferences">
@@ -1406,6 +1413,17 @@
             <value n="tldURL" v="@oracle.home@../modules/glassfish.jstl_1.2.0.1.jar!/META-INF/scriptfree.tld"/>
             <value n="URI" v="http://jakarta.apache.org/taglibs/standard/scriptfree"/>
             <value n="version" v="1.2"/>
+         </hash>
+         <hash>
+            <value n="jspVersion" v="2.1"/>
+            <value n="libraries" v="ocdecl 1.0 Tag Libraries"/>
+            <value n="name" v="ocdecl"/>
+            <value n="prefix" v="pedc"/>
+            <value n="runInEditor" v="true"/>
+            <value n="showInPalette" v="true"/>
+            <value n="tldURL" v="@project@../../../../../../../Oracle/Middleware/jdeveloper/webcenter/modules/oracle.portlet.server_11.1.1/composer-decl-comp.jar!/META-INF/ocdecl.tld"/>
+            <value n="URI" v="http://xmlns.oracle.com/adf/pageeditor/declarativecomp"/>
+            <value n="version" v="1.0"/>
          </hash>
       </list>
    </hash>

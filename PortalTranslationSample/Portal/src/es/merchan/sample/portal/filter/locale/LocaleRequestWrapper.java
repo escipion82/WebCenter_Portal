@@ -54,10 +54,6 @@ public final class LocaleRequestWrapper extends HttpServletRequestWrapper{
     public Enumeration getLocales() {
         Vector locales = new Vector();
         locales.add(locale);
-        Iterator iterator = locales.iterator();
-        while (iterator.hasNext()) {
-            System.out.println("Enumeration: " + iterator.next());
-        }
         return locales.elements();
     }
 }
