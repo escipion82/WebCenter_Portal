@@ -63,7 +63,7 @@ public final class LocaleHandler {
             supportedLocales.add(itemLocale);
         }
         currentLocale = ADFContext.getCurrent().getLocale();
-        changed = false;
+        changed = true;
     }
 
     /**

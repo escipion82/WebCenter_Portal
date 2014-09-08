@@ -29,28 +29,56 @@
       <property
          name="jspName">/pages_home</property>
    </Page>
+   <Page
+      id="Page6">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="jspName">/faces/home</property>
+   </Page>
+   <Page
+      id="Page8">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="jspName">/"adfAuthentication?logout=true&amp;end_url=/index.html</property>
+   </Page>
+   <Page
+      id="Page10">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="jspName">/adfAuthentication?logout=true&amp;end_url=/index.html</property>
+   </Page>
    <NavigationCase
       islink="true"
-      id="NavigationCase4"
+      id="NavigationCase11"
       from="Page2"
-      to="Page3">
+      to="Page10">
       <property
          name="fromOutcome">logout_success</property>
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">R45,124.01758,80.649414,211.35544,79.649414,L46</property>
+         name="sdm:polyPoints">B43,84.51758,126.649414,20.0,87.0,B50</property>
    </NavigationCase>
+   <Page
+      id="Page12">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="jspName">/home</property>
+   </Page>
    <NavigationCase
       islink="true"
-      id="NavigationCase5"
+      id="NavigationCase13"
       from="Page2"
-      to="Page3">
+      to="Page12">
       <property
          name="fromOutcome">login_success</property>
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">R55,124.05763,87.649414,211.39551,86.649414,L54</property>
+         name="sdm:polyPoints">B57,91.51758,138.85075,20.0,87.0,B50</property>
    </NavigationCase>
 </SDM>

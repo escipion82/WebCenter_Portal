@@ -27,6 +27,8 @@ public class LocalePhaseListener implements PagePhaseListener {
             if (localeHandler != null && localeHandler.isChanged()) {
                 SiteStructureUtils.invalidateDefaultNavigationModelCache();
                 localeHandler.setChanged(false);
+            } else if (localeHandler == null) {
+                SiteStructureUtils.invalidateDefaultNavigationModelCache();
             }
         }
     }

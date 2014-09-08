@@ -5,7 +5,7 @@
                xmlns="http://xmlns.oracle.com/adf/rcs/catalog" visible="#{true}">
   <contents>
     <url factoryClass="oracle.webcenter.portalframework.sitestructure.rc.AdfPageResourceFactory"
-         id="home1" url="page://oracle/webcenter/portalapp/pages/home.jspx"
+         id="home" url="page://oracle/webcenter/portalapp/pages/home.jspx"
          visible="#{true}">
       <attributes>
         <attribute isKey="true" attributeId="Title" value="HOME"
@@ -40,7 +40,7 @@
       </attributes>
       <contents>
         <url factoryClass="oracle.webcenter.portalframework.sitestructure.rc.AdfPageResourceFactory"
-             id="home" url="page://oracle/webcenter/portalapp/pages/home.jspx"
+             id="hometwo" url="page://oracle/webcenter/portalapp/pages/home.jspx"
              visible="#{true}">
           <attributes>
             <attribute isKey="true" attributeId="Title" value="HOME"
