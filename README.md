@@ -35,6 +35,16 @@ Documentation:
 - Spanish: http://danielmerchanoracle.blogspot.co.uk/2014/04/integrando-webcenter-likes-comments-api.html
 - English: http://www.vassit.co.uk/knowledge/integrating-webcenter-likes-comments-api-i/
 
+===========================
+Project: PortalTranslationSample
+------------- 
+WebCenter Framework Portal 11.1.1.8 implementing a Multilanguage solution for literals.
+
+It is based on a Java Filter for User Preference Locale and an ADF Phase Listener to refresh and invalidate the Navigation Model Cache in case of using Resource Bundle in the Title Attribute of the Navigation Resources.
+							 
+Documentation: 
+- Spanish: TBA
+- English: TBA
 
 
 
